@@ -1,46 +1,56 @@
-# AUREX Week 1 Internship
+# AUREX FULL-Stack Engineering Internship 
 
-## Intern Information
+## Week 2 — CSS & Responsive Web Design
+
+### Intern Information
 
 **Name:** Fajar Ijaz  
-**Domain:** Full-Stack Web Development  
-**Week:** Week 1
+**Domain:** Full-Stack Engineering  
+**Week:** Week 2
 
-## Task Description
+### Live Deployment
 
-The objective of this task is to create a basic personal profile webpage using HTML5 and practice Git and GitHub fundamentals.
+**Live Website:** [Add your GitHub Pages live URL here]
 
-## Technologies Used
+### CSS Features Implemented
 
-- HTML5
-- Git
-- GitHub
+- CSS3 styling and selectors
+- Colors, backgrounds, fonts, and text styling
+- CSS Box Model
+- Padding, margin, borders, and spacing
+- Flexbox for navigation layout
+- Responsive design using CSS media queries
+- Mobile-friendly layout
+- Desktop, tablet, and mobile responsiveness
 
-## Project Sections
+### Layout Techniques
 
-The webpage includes:
+- Flexbox
+- Responsive navigation
+- Structured section layout
+- Consistent spacing and alignment
 
-- Header
-- Navigation
-- About Me
-- Skills
-- Education
-- Experience
-- Hobbies
-- Future Goals
-- Contact Form
-- Footer
+### Key Learnings
 
-## How to Run the Project Locally
+- Learned how to connect an external CSS file with HTML.
+- Practiced CSS selectors and the CSS Box Model.
+- Learned how to use Flexbox for page layout.
+- Learned how media queries help create responsive websites.
 
-1. Download or clone this repository.
-2. Open the `index.html` file in a web browser.
-3. The personal profile webpage will be displayed.
+### Challenges Faced
 
-## Key Learnings
+- Adjusting the layout for smaller screens.
+- Maintaining proper spacing and readable text on mobile devices.
+- Making the website responsive across different screen sizes.
 
-During Week 1, I learned the basics of HTML5 structure, semantic HTML elements, forms, links, and headings. I also learned the basic concepts of Git and GitHub.
+### Week 2 Checklist
 
-## Difficulties / Blockers
-
-I faced some difficulty while setting up and managing the repository on a mobile device, but I was able to complete the required tasks.
+- [x] CSS styling implemented
+- [x] CSS Box Model used
+- [x] Flexbox implemented
+- [x] Responsive design implemented
+- [x] Mobile layout tested
+- [ ] Desktop screenshot
+- [ ] Tablet screenshot
+- [x] Mobile screenshot
+- [ ] Final live deployment verification
