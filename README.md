@@ -10,7 +10,7 @@
 
 ### Live Deployment
 
-**Live Website:** [Add your GitHub Pages live URL here]
+**Live Website:** https://fajar19-dior. github.io/aurex-web-internship-fajar-ijaz/
 
 ### CSS Features Implemented
 
