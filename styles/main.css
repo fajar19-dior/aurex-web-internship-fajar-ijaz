@@ -172,3 +172,14 @@ article h3 {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
+
+/* Week 3 - Button Interaction */
+
+.project-card a {
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-card a:hover {
+    transform: scale(1.05);
+    background: #444444;
+}
