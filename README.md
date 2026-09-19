@@ -50,7 +50,7 @@
 - [x] Flexbox implemented
 - [x] Responsive design implemented
 - [x] Mobile layout tested
-- [ ] Desktop screenshot
-- [ ] Tablet screenshot
+- [x] Desktop screenshot
+- [x] Tablet screenshot
 - [x] Mobile screenshot
-- [ ] Final live deployment verification
+- [x] Final live deployment verification
