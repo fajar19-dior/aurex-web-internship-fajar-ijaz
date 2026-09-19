@@ -126,3 +126,38 @@ article h3 {
         padding: 18px;
     }
 }
+
+/* Week 3 - Project Grid */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.project-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    background: #2f2a24;
+    color: #ffffff;
+}
