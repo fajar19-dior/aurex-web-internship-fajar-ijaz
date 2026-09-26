@@ -1,5 +1,3 @@
-
-/* General Page Styling */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,190 +6,134 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f5f1e8;
-    color: #2f2a24;
-    line-height: 1.6;
+    background: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
 }
 
-/* Header */
-header {
-    background: #2f2a24;
-    color: #f5f1e8;
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+h1 {
     text-align: center;
-    padding: 40px 20px;
+    margin-bottom: 25px;
 }
 
-header h1 {
-    font-size: 2.5rem;
+.task-form {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.task-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     margin-bottom: 10px;
+    font-size: 16px;
 }
 
-header p {
-    font-size: 1.1rem;
+.task-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-/* Navigation */
-nav {
+.task-form button:hover {
+    opacity: 0.85;
+}
+
+#validationMessage {
+    color: #d00;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.filters {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    background: #d8cbb8;
-    padding: 15px;
+    gap: 10px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
-nav a {
-    color: #2f2a24;
-    text-decoration: none;
-    font-weight: bold;
+.filters button {
+    padding: 9px 15px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 7px;
+    cursor: pointer;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/* Main Content */
-main {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-/* Sections */
-section {
-    background: #ffffff;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    border: 1px solid #d8cbb8;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-section h2 {
-    margin-bottom: 15px;
-    font-size: 1.7rem;
-}
-
-/* Education Article */
-article {
+.task {
+    background: white;
     padding: 15px;
-    background: #f5f1e8;
-    border-radius: 8px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-article h3 {
-    margin-bottom: 8px;
+.task.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.55;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav {
-        gap: 15px;
-    }
-
-    main {
-        margin: 25px auto;
-        padding: 0 15px;
-    }
-
-    section {
-        padding: 22px;
-    }
+.task-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
 }
 
-@media (max-width: 480px) {
-    header {
-        padding: 30px 15px;
-    }
-
-    header h1 {
-        font-size: 1.7rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    section {
-        padding: 18px;
-    }
-}
-
-/* Week 3 - Project Grid */
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 25px;
-}
-
-.project-card {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.project-card h3 {
-    margin-bottom: 12px;
-}
-
-.project-card p {
-    margin-bottom: 18px;
-    line-height: 1.6;
-}
-
-.project-card a {
-    display: inline-block;
-    padding: 10px 16px;
-    text-decoration: none;
+.task-actions button {
+    padding: 7px 10px;
+    border: none;
     border-radius: 6px;
-    background: #2f2a24;
-    color: #ffffff;
+    cursor: pointer;
 }
 
-/* Week 3 - Card Hover Animation */
-
-.project-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.edit-btn {
+    background: #eee;
 }
 
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.complete-btn {
+    background: #dff5df;
 }
 
-/* Week 3 - Button Interaction */
-
-.project-card a {
-    transition: transform 0.3s ease, background 0.3s ease;
+.delete-btn {
+    background: #ffe0e0;
 }
 
-.project-card a:hover {
-    transform: scale(1.05);
-    background: #444444;
-}
-
-/* Week 3 - Responsive Design */
-
-@media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+        margin: 25px auto;
     }
 
-    .project-card {
-        padding: 20px;
+    .task {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        width: 100%;
     }
 }
