@@ -3,7 +3,15 @@ const taskInput = document.getElementById("taskInput");
 const taskList = document.getElementById("taskList");
 const validationMessage = document.getElementById("validationMessage");
 
-let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+let tasks = [];
+
+try {
+    const savedTasks = localStorage.getItem("tasks");
+    tasks = savedTasks ? JSON.parse(savedTasks) : [];
+} catch (error) {
+    tasks = [];
+}
+
 let currentFilter = "all";
 
 function saveTasks() {
@@ -16,14 +24,18 @@ function renderTasks() {
     let filteredTasks = tasks;
 
     if (currentFilter === "active") {
-        filteredTasks = tasks.filter(task => !task.completed);
+        filteredTasks = tasks.filter(function(task) {
+            return !task.completed;
+        });
     }
 
     if (currentFilter === "completed") {
-        filteredTasks = tasks.filter(task => task.completed);
+        filteredTasks = tasks.filter(function(task) {
+            return task.completed;
+        });
     }
 
-    filteredTasks.forEach(task => {
+    filteredTasks.forEach(function(task) {
         const taskElement = document.createElement("div");
         taskElement.className = "task";
 
@@ -42,7 +54,7 @@ function renderTasks() {
         completeButton.className = "complete-btn";
         completeButton.textContent = task.completed ? "Undo" : "Complete";
 
-        completeButton.addEventListener("click", () => {
+        completeButton.addEventListener("click", function() {
             task.completed = !task.completed;
             saveTasks();
             renderTasks();
@@ -52,7 +64,7 @@ function renderTasks() {
         editButton.className = "edit-btn";
         editButton.textContent = "Edit";
 
-        editButton.addEventListener("click", () => {
+        editButton.addEventListener("click", function() {
             const updatedText = prompt("Edit your task:", task.text);
 
             if (updatedText !== null && updatedText.trim() !== "") {
@@ -66,8 +78,11 @@ function renderTasks() {
         deleteButton.className = "delete-btn";
         deleteButton.textContent = "Delete";
 
-        deleteButton.addEventListener("click", () => {
-            tasks = tasks.filter(item => item.id !== task.id);
+        deleteButton.addEventListener("click", function() {
+            tasks = tasks.filter(function(item) {
+                return item.id !== task.id;
+            });
+
             saveTasks();
             renderTasks();
         });
@@ -83,7 +98,7 @@ function renderTasks() {
     });
 }
 
-taskForm.addEventListener("submit", function (event) {
+taskForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
     const taskText = taskInput.value.trim();
@@ -109,8 +124,8 @@ taskForm.addEventListener("submit", function (event) {
     taskInput.value = "";
 });
 
-document.querySelectorAll(".filters button").forEach(button => {
-    button.addEventListener("click", () => {
+document.querySelectorAll(".filters button").forEach(function(button) {
+    button.addEventListener("click", function() {
         currentFilter = button.dataset.filter;
         renderTasks();
     });
